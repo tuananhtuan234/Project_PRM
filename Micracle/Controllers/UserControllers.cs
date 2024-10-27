@@ -24,7 +24,7 @@ namespace Micracle.Controllers
         }
 
         #region Register User
-        [HttpPost("User register")]
+        [HttpPost("user-register")]
         public async Task<IActionResult> AddUser([FromBody] RegisterDTO userDto)
         {
             try
@@ -72,7 +72,7 @@ namespace Micracle.Controllers
 
             // Tạo token JWT và trả về cho người dùng
             var token = _jwtTokenHelper.GenerateJwtToken(user);
-            return Ok(new { token });
+            return Ok(new { token, userId = user.Id });
         }
         #endregion
 

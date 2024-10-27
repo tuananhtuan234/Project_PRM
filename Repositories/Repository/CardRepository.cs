@@ -2,7 +2,6 @@
 using Repositories.Data;
 using Repositories.Data.Entity;
 using Repositories.Interface;
-using Repositories.Migrations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
