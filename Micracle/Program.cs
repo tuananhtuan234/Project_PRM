@@ -67,7 +67,7 @@ namespace Micracle
                 options.AddPolicy("AllowSpecificOrigins",
                     builder =>
                     {
-                        builder.WithOrigins("http://localhost:5000")
+                        builder.AllowAnyOrigin()
                                .AllowAnyHeader()
                                .AllowAnyMethod();
                     });
@@ -120,7 +120,7 @@ namespace Micracle
             //SQL
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(connectionString/*, b => b.MigrationsAssembly("Micracle")*/)); 
+                options.UseSqlServer(connectionString/*, b => b.MigrationsAssembly("Micracle")*/));     
                
 
             var jwtSettings = builder.Configuration.GetSection("Jwt");
