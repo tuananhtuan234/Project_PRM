@@ -9,12 +9,22 @@
     }
   },
   "profiles": {
-    "https": {
+    //"https": {
+    //  "commandName": "Project",
+    //  "dotnetRunMessages": true,
+    //  "launchBrowser": true,
+    //  "launchUrl": "swagger",
+    //  "applicationUrl": "https://localhost:7164",
+    //  "environmentVariables": {
+    //    "ASPNETCORE_ENVIRONMENT": "Development"
+    //  }
+    //},
+    "RolexApplication_Backend": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7164",
+      "applicationUrl": "http://192.168.1.11:7164",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

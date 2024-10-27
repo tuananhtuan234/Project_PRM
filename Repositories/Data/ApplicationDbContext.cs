@@ -28,6 +28,14 @@ namespace Repositories.Data
         public DbSet<ChatMessage> ChatMessages { get; set; }
         public DbSet<StoreLocation> StoreLocations { get; set; }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("Server=(local);Database=Miracle;Uid=sa;Password=12345;MultipleActiveResultSets=true;TrustServerCertificate=True");
+            }
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>().HasKey(u => u.Id);
